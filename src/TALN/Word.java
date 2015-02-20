@@ -1,8 +1,5 @@
 package TALN;
 
-/**
- * Created by jdeveaux on 12/02/2015.
- */
 public class Word {
     public String getWordString() {
         return Word;
@@ -16,7 +13,10 @@ public class Word {
     }
 
     public void getWordTermination(){
-
+        String word= this.getWordString();
+        for (int i = 0; i < word.length() ; i++) {
+            // word.charAt();
+        }
     }
     public void getWordroot(){
 

@@ -21,13 +21,16 @@ public class TerminationTree {
             InputStreamReader ipsr = new InputStreamReader(ips);
             BufferedReader br = new BufferedReader(ipsr);
             String ligne;
+            this.setRoot('^');
+            this.child=new TerminationTree();
+            this.brother=new TerminationTree();
             // try to put termination in TerminationTree
             while ((ligne = br.readLine()) != null) {
                 // split all inline entry in an entry table
                 String[] entry =ligne.split(",");
                 char[] termination;
                 for(int i = 1; i < entry.length; i++) {
-                    this.subTree=this;
+                    this.subTree=this.child;
 
                     // each termination in table of char
                     termination = entry[i].toCharArray();
@@ -45,17 +48,11 @@ public class TerminationTree {
                                 System.out.println("tree-c--" + termination[j]);
                                 this.subTree=this.subTree.child;
                                 j--;
-                            }else if (this.subTree.brother.root!=termination[j]){
-                                System.out.println("tree-b--" + termination[j]);
+                            }else{
                                 this.subTree=this.subTree.brother;
-                            }else {
-                                System.out.println("--"+termination[j]);
-                                this.subTree.setRoot(termination[j]);
-                                this.subTree=this.subTree.child;
-                                j--;
                             }
                         }
-                        this.addChild('-');
+                        this.addChild('*');
                     }
                 }
             }
@@ -79,15 +76,12 @@ public class TerminationTree {
         }
         else this.brother.addChild(c);
     }
-    private void addBrother(){
-
-    }
 
     private void ShowTerminationTreeRec(TerminationTree tree,int n ) {
         for (int i = 1; i < n; i++) {
-            System.out.print('_');
+            System.out.print(' ');
         }
-        if (tree.root!='#'&&tree.root!='-'){
+        if (tree.root!='#'){
             System.out.println(tree.root);
             tree.ShowTerminationTreeRec(tree.child, n + 1);
             if (tree.brother.root!='#'){

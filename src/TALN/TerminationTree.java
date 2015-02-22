@@ -25,26 +25,37 @@ public class TerminationTree {
             while ((ligne = br.readLine()) != null) {
                 // split all inline entry in an entry table
                 String[] entry =ligne.split(",");
+                char[] termination;
                 for(int i = 1; i < entry.length; i++) {
                     this.subTree=this;
 
                     // each termination in table of char
-                    char[] termination = entry[i].toCharArray();
+                    termination = entry[i].toCharArray();
                     int j = termination.length-1;
-                    while (j <=0) {
-                        if (this.subTree.root=='#'){
-                            this.subTree.setRoot(termination[j]);
-                            this.subTree.child=new TerminationTree();
-                            this.subTree.brother=new TerminationTree();
-                        }else if (termination[j]== this.subTree.root) {
-                           this.subTree=this.subTree.child;
-                        }else if (this.subTree.brother.root !='#'){
-                            this.subTree=this.subTree.brother;
-                        }else {
-                            this.subTree.setRoot(termination[j]);
-                            this.subTree=this.subTree.child;
-                            j--;
+                    if (termination[j]!=' '){
+                        while (j >=0) {
+                            if (this.subTree.root=='#'){
+                                this.subTree.setRoot(termination[j]);
+                                this.subTree.child=new TerminationTree();
+                                this.subTree.brother=new TerminationTree();
+                                System.out.println("tree-r--" + termination[j]);
+                                this.subTree=this.subTree.child;
+                                j--;
+                            }else if (this.subTree.root==termination[j]) {
+                                System.out.println("tree-c--" + termination[j]);
+                                this.subTree=this.subTree.child;
+                                j--;
+                            }else if (this.subTree.brother.root!=termination[j]){
+                                System.out.println("tree-b--" + termination[j]);
+                                this.subTree=this.subTree.brother;
+                            }else {
+                                System.out.println("--"+termination[j]);
+                                this.subTree.setRoot(termination[j]);
+                                this.subTree=this.subTree.child;
+                                j--;
+                            }
                         }
+                        this.addChild('-');
                     }
                 }
             }
@@ -60,21 +71,29 @@ public class TerminationTree {
         System.out.println("\n>--------------------<");
     }
 
-    private void addChild(){
-
+    private void addChild(char c){
+        if (this.root=='#') {
+            this.brother=new TerminationTree();
+            this.child=new TerminationTree();
+            this.root=c;
+        }
+        else this.brother.addChild(c);
     }
     private void addBrother(){
 
     }
 
     private void ShowTerminationTreeRec(TerminationTree tree,int n ) {
-        for (int i = 0; i < n; i++) {
-            System.out.print('\t');
+        for (int i = 1; i < n; i++) {
+            System.out.print('_');
         }
-        if (tree.root!='!'){
+        if (tree.root!='#'&&tree.root!='-'){
             System.out.println(tree.root);
-            tree.ShowTerminationTreeRec(tree.child,n+1);
-            tree.ShowTerminationTreeRec(tree.brother, n + 1);
+            tree.ShowTerminationTreeRec(tree.child, n + 1);
+            if (tree.brother.root!='#'){
+                System.out.println();
+                tree.ShowTerminationTreeRec(tree.brother,n);
+            }
         }
     }
 

@@ -12,11 +12,13 @@ public class TerminationTree {
     public TerminationTree(){
         this.root='#';
         this.children = new ArrayList<TerminationTree>();
+        this.definition = new ArrayList<String>();
     }
 
     public TerminationTree(char l){
         this.root = l;
         this.children = new ArrayList<TerminationTree>();
+        this.definition = new ArrayList<String>();
     }
 
     public boolean hasChild(){

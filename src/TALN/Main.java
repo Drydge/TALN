@@ -11,13 +11,10 @@ public class Main {
             return;
         }
         try {
-            TerminationTree tree= TerminationTree.loadTerminationTree();
+            Analysator analaisis=new Analysator();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        // tree.makeTerminationTree();
-        // tree.ShowTerminationTree();
 
 
         // firstly we're gonna implement the word only implementation

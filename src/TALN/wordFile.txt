@@ -1,14 +1,13 @@
-être, verbe, être, s, ê, êt, f
-venir, verbe, venir, vien, ven, vienn, vin, vîn
-tenir, verbe, venir, tien, ten, tienn, tin, tîn
-aimer, verbe, aimer, aim
-créer, verbe, aimer, cré
-apprécier, verbe, aimer, appréci
-arbre, nom, arbre, soleil
-cou, nom, arbre, cou
-balle, nom, balle, balle
-lune, nom, balle, lune
-chou, nom, chou, ch
-bijou, nom, chou, bij
-acteur, nom, acteur, act
-aviateur, nom, acteur, aviat
+venir,verbe,venir,vien,ven,vienn,vin,vîn
+tenir,verbe,venir,tien,ten,tienn,tin,tîn
+aimer,verbe,aimer,aim
+créer,verbe,aimer,cré
+apprécier,verbe,aimer,appréci
+arbre,nom,arbre,soleil
+cou,nom,arbre,cou
+balle,nom,balle,balle
+lune,nom,balle,lune
+chou,nom,chou,ch
+bijou,nom,chou,bij
+acteur,nom,acteur,act
+aviateur,nom,acteur,aviat

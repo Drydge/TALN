@@ -14,7 +14,7 @@ public class Word {
 
     public void getWordTermination(){
         String word= this.getWordString();
-        for (int i = 0; i < word.length() ; i++) {
+        for (int i = word.length(); i < 0  ; i++) {
             // word.charAt();
         }
     }

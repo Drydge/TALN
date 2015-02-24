@@ -27,32 +27,31 @@ public class RootTree {
             String[] split = line.split(",");
             String word = split[0];
             String type = split[1];
-            String[] roots = new String[split.length - 1];
-            System.arraycopy(split, 2, roots, 1, split.length);
+            String[] roots = new String[split.length - 2];
+            System.arraycopy(split, 2, roots, 0, split.length-2);
             for(String root: roots){
-                // - Vérifier si l'un des fils correspond à la dernière lettre de la terminaison
-                InsertRoot(toReturn, root,word);
+                InsertRoot(toReturn, root,word+","+type);
             }
         }
         return toReturn;
     }
 
-    private void InsertRoot(RootTree currentLeaf, String root, String word) {
+    private static void InsertRoot(RootTree currentLeaf, String root, String word) {
         // Si ma récursion est terminée je m'arrête;
         if(root.equals("")){
-            currentLeaf.definition.add(word);
+            //currentLeaf.definition.add(word);
             return;
         }
         // S'il y a un fils qui est le même que la dernière lettre je continue sur ce fils
-        char lastChar = root.charAt(root.length() - 1);
+        char lastChar = root.charAt(0);
         if(currentLeaf.checkChild(lastChar)){
-            InsertRoot(currentLeaf.getChild(lastChar), root.substring(0, root.length() - 1), word);
+            InsertRoot(currentLeaf.getChild(lastChar), root.substring(1, root.length()), word);
         }
         //sinon j'ajoute le noeud et je continue
         else{
             RootTree nextNode = new RootTree(lastChar);
             currentLeaf.children.add(nextNode);
-            InsertRoot(nextNode, root.substring(0, root.length() - 1), word);
+            InsertRoot(nextNode, root.substring(1, root.length()), word);
         }
     }
     private boolean checkChild(char c) {

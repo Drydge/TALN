@@ -11,7 +11,8 @@ public class Main {
             return;
         }
         try {
-            Analysator analaisis=new Analysator();
+            Analysator analisis=new Analysator();
+
         } catch (IOException e) {
             e.printStackTrace();
         }

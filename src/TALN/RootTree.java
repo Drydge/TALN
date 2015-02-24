@@ -17,7 +17,7 @@ public class RootTree {
         this.children=new ArrayList<RootTree>();
     }
 
-    public RootTree loadRootTree()throws IOException {
+    public static RootTree loadRootTree()throws IOException {
         InputStream ips = new FileInputStream("./src/TALN/wordFile.txt");
         InputStreamReader ipsr = new InputStreamReader(ips);
         BufferedReader br = new BufferedReader(ipsr);

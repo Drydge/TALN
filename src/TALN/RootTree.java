@@ -30,13 +30,13 @@ public class RootTree {
             String[] roots = new String[split.length - 2];
             System.arraycopy(split, 2, roots, 0, split.length-2);
             for(String root: roots){
-                InsertRoot(toReturn, root,word+","+type);
+                InsertRoot(toReturn, root,word,type);
             }
         }
         return toReturn;
     }
 
-    private static void InsertRoot(RootTree currentLeaf, String root, String word) {
+    private static void InsertRoot(RootTree currentLeaf, String root, String word,String type) {
         // Si ma récursion est terminée je m'arrête;
         if(root.equals("")){
             //currentLeaf.definition.add(word);
@@ -45,13 +45,13 @@ public class RootTree {
         // S'il y a un fils qui est le même que la dernière lettre je continue sur ce fils
         char lastChar = root.charAt(0);
         if(currentLeaf.checkChild(lastChar)){
-            InsertRoot(currentLeaf.getChild(lastChar), root.substring(1, root.length()), word);
+            InsertRoot(currentLeaf.getChild(lastChar), root.substring(1, root.length()), word, type);
         }
         //sinon j'ajoute le noeud et je continue
         else{
             RootTree nextNode = new RootTree(lastChar);
             currentLeaf.children.add(nextNode);
-            InsertRoot(nextNode, root.substring(1, root.length()), word);
+            InsertRoot(nextNode, root.substring(1, root.length()), word, type);
         }
     }
     private boolean checkChild(char c) {

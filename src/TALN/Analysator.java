@@ -25,9 +25,11 @@ public class Analysator {
     }
 
     public String analyze(String word){
-        ArrayList<String> wordRoot= this.RTree.getWordRoot("mangerais");
-        ArrayList<Grammaire>wordTerm=this.TTree.getWordTermination("mangerais");
+        ArrayList<String> wordRoot= this.RTree.getWordRoot(word);
+        ArrayList<Grammaire>wordTerm=this.TTree.getWordTermination(word);
         System.out.println(wordRoot);
+        System.out.println(wordTerm);
+
 
         return "";
     }

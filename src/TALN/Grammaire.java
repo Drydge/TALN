@@ -34,4 +34,8 @@ public class Grammaire {
         }
         return -1;
     }
+
+    public String toString(){
+        return(this.group+" "+this.person);
+    }
 }

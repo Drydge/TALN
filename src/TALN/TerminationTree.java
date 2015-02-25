@@ -1,6 +1,7 @@
 package TALN;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class TerminationTree {
@@ -8,6 +9,7 @@ public class TerminationTree {
     // contient l'ensemble des types de mots : verbe premier groupe, nom, etc
     private ArrayList<Grammaire> definition;
     private ArrayList<TerminationTree> children;
+
 
     public TerminationTree(){
         this.root='#';
@@ -87,20 +89,21 @@ public class TerminationTree {
         }
         return null;
     }
-    public ArrayList<Grammaire> getWordTermination(String word){
-        if (word!=""){
-            char firstLetter =word.charAt(word.length()-1);
-            if (this.checkChild(firstLetter)){
-                return this.getChild(firstLetter).getWordTermination(word.substring(0, word.length()-2));
-            }
-            else if (checkChild('-')){
-                return this.getChild('-').definition;
-            }
-            return null;
-        }
-        return null;
-    }
 
+    public ArrayList<Grammaire> getWordTermination(String word) {
+        char firstLetter =word.charAt(word.length()-1);
+        ArrayList<Grammaire> toReturn = new ArrayList<Grammaire>();
+
+
+        if(this.checkChild('-')){
+            toReturn.addAll(this.getChild('-').definition);
+        }
+        if(!this.checkChild(firstLetter)) return toReturn;
+
+        toReturn.addAll(this.getChild(firstLetter).getWordTermination(word.substring(0, word.length() - 1)));
+
+        return toReturn;
+    }
 }
 
 

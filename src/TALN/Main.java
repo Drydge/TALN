@@ -11,7 +11,7 @@ public class Main {
             return;
         }
         try {
-            Analysator.getInstance().analyze("ve");
+            Analysator.getInstance().analyze(args[0]);
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -6,19 +6,19 @@ import java.util.ArrayList;
 public class TerminationTree {
     private char root;
     // contient l'ensemble des types de mots : verbe premier groupe, nom, etc
-    private ArrayList<String> definition;
+    private ArrayList<Grammaire> definition;
     private ArrayList<TerminationTree> children;
 
     public TerminationTree(){
         this.root='#';
         this.children = new ArrayList<TerminationTree>();
-        this.definition = new ArrayList<String>();
+        this.definition = new ArrayList<Grammaire>();
     }
 
     public TerminationTree(char l){
         this.root = l;
         this.children = new ArrayList<TerminationTree>();
-        this.definition = new ArrayList<String>();
+        this.definition = new ArrayList<Grammaire>();
     }
 
     public boolean hasChild(){
@@ -39,31 +39,34 @@ public class TerminationTree {
             String group = split[0];
             String[] terminations = new String[split.length - 1];
             System.arraycopy(split, 1, terminations, 0, split.length - 1);
+            int index = 1;
             for(String termination: terminations){
                 // - Vérifier si l'un des fils correspond à la dernière lettre de la terminaison
-                InsertTermination(toReturn, termination, group);
+                Grammaire grammar = new Grammaire(group, index);
+                InsertTermination(toReturn, termination, grammar);
+                index ++;
             }
         }
 
         return toReturn;
     }
 
-    private static void InsertTermination(TerminationTree currentLeaf, String termination, String group) {
+    private static void InsertTermination(TerminationTree currentLeaf, String termination, Grammaire grammar) {
         // Si ma récursion est terminée je m'arrête;
         if(termination.equals("")){
-            currentLeaf.definition.add(group);
+            currentLeaf.definition.add(grammar);
             return;
         }
         // S'il y a un fils qui est le même que la dernière lettre je continue sur ce fils
         char lastChar = termination.charAt(termination.length() - 1);
         if(currentLeaf.checkChild(lastChar)){
-            InsertTermination(currentLeaf.getChild(lastChar), termination.substring(0, termination.length() - 1), group);
+            InsertTermination(currentLeaf.getChild(lastChar), termination.substring(0, termination.length() - 1), grammar);
         }
         //sinon j'ajoute le noeud et je continue
         else{
             TerminationTree nextNode = new TerminationTree(lastChar);
             currentLeaf.children.add(nextNode);
-            InsertTermination(nextNode, termination.substring(0, termination.length() - 1), group);
+            InsertTermination(nextNode, termination.substring(0, termination.length() - 1), grammar);
         }
     }
 
@@ -84,4 +87,8 @@ public class TerminationTree {
         }
         return null;
     }
+
+
 }
+
+

@@ -1,12 +1,13 @@
-vip1,s,s,t,ons,ez,ent
-vii1,ais,ais,ait,ion,iez,aient
-vps1,s,s,t,mes,tes,rent
-vf1,drai,dras,dra,drons,drez,dront
-vc1,drais,drais,drait,drions,driez,driaient
-vsp1,e,es,e,ions,iez,ent
-vsi1,sse,sses,t,ssions,ssiez,ssent
-vpt1,u,ue,es,ues,ant,ir
-nf1, , ,s,s
-nn1, ,e,s,es
-neurice,eur,rice,eurs,rices
-neureuse,eur,euse,eurs,euses
+verbe_indicatif_present,s,s,t,ons,ez,ent
+verbe_indicatif_imparfait,ais,ais,ait,ion,iez,aient
+verbe_indicatif_passesimple,s,s,t,mes,tes,rent
+verbe_indicatif_futur,drai,dras,dra,drons,drez,dront
+verbe_conditionel_present,drais,drais,drait,drions,driez,driaient
+verbe_subjonctif_present,e,es,e,ions,iez,ent
+verbe_subjonctif_imparfait,sse,sses,t,ssions,ssiez,ssent
+nom_feminin_singulier,,e,rice,euse
+nom_masculin_singulier,,
+nom_feminin_pluriel,s,es,euses,rices
+nom_masculin_pluriel,s
+nom_invariable,
+

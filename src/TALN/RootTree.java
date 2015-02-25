@@ -30,7 +30,7 @@ public class RootTree {
             String[] roots = new String[split.length - 2];
             System.arraycopy(split, 2, roots, 0, split.length-2);
             for(String root: roots){
-                InsertRoot(toReturn, root,word,type);
+                InsertRoot(toReturn, root+"-",word,type);
             }
         }
         return toReturn;
@@ -39,7 +39,8 @@ public class RootTree {
     private static void InsertRoot(RootTree currentLeaf, String root, String word,String type) {
         // Si ma récursion est terminée je m'arrête;
         if(root.equals("")){
-            //currentLeaf.definition.add(word);
+            currentLeaf.definition=new ArrayList<String>();
+            currentLeaf.definition.add(word);
             return;
         }
         // S'il y a un fils qui est le même que la dernière lettre je continue sur ce fils
@@ -67,6 +68,20 @@ public class RootTree {
             if(child.root == root){
                 return child;
             }
+        }
+        return null;
+    }
+
+    public ArrayList<String> getWordRoot(String word){
+        if (word!=""){
+            char firstLetter =word.charAt(0);
+            if (this.checkChild(firstLetter)){
+                return this.getChild(firstLetter).getWordRoot(word.substring(1, word.length()));
+            }
+            else if (checkChild('-')){
+                return this.getChild('-').definition;
+            }
+            return null;
         }
         return null;
     }

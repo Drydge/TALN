@@ -43,7 +43,7 @@ public class TerminationTree {
             for(String termination: terminations){
                 // - Vérifier si l'un des fils correspond à la dernière lettre de la terminaison
                 Grammaire grammar = new Grammaire(group, index);
-                InsertTermination(toReturn, termination, grammar);
+                InsertTermination(toReturn, '-'+termination, grammar);
                 index ++;
             }
         }
@@ -87,7 +87,19 @@ public class TerminationTree {
         }
         return null;
     }
-
+    public ArrayList<Grammaire> getWordTermination(String word){
+        if (word!=""){
+            char firstLetter =word.charAt(word.length()-1);
+            if (this.checkChild(firstLetter)){
+                return this.getChild(firstLetter).getWordTermination(word.substring(0, word.length()-2));
+            }
+            else if (checkChild('-')){
+                return this.getChild('-').definition;
+            }
+            return null;
+        }
+        return null;
+    }
 
 }
 

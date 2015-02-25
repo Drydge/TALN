@@ -1,6 +1,7 @@
 package TALN;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Analysator {
     private TerminationTree TTree;
@@ -24,8 +25,9 @@ public class Analysator {
     }
 
     public String analyze(String word){
-
-
+        ArrayList<String> wordRoot= this.RTree.getWordRoot("mangerais");
+        ArrayList<Grammaire>wordTerm=this.TTree.getWordTermination("mangerais");
+        System.out.println(wordRoot);
 
         return "";
     }

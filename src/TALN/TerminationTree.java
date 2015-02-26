@@ -44,7 +44,7 @@ public class TerminationTree {
             int index = 1;
             for(String termination: terminations){
                 // - Vérifier si l'un des fils correspond à la dernière lettre de la terminaison
-                Grammaire grammar = new Grammaire(group, index);
+                Grammaire grammar = new Grammaire(group,termination ,index);
                 InsertTermination(toReturn, '-'+termination, grammar);
                 index ++;
             }
@@ -73,33 +73,30 @@ public class TerminationTree {
     }
 
     private boolean checkChild(char c) {
-        for(TerminationTree child : this.children){
-            if(child.root == c){
+        // verification dans les child le noeud de racine 'c' existe
+        for(TerminationTree child : this.children)
+            if(child.root == c)
                 return true;
-            }
-        }
         return false;
     }
 
     private TerminationTree getChild(char root){
-        for(TerminationTree child : this.children){
-            if(child.root == root){
+        // renvoie le child de racine 'root'
+        for(TerminationTree child : this.children)
+            if(child.root == root)
                 return child;
-            }
-        }
         return null;
     }
 
     public ArrayList<Grammaire> getWordTermination(String word) {
+
         char firstLetter =word.charAt(word.length()-1);
+        // initialisation de la list a retourner
         ArrayList<Grammaire> toReturn = new ArrayList<Grammaire>();
-
-
-        if(this.checkChild('-')){
-            toReturn.addAll(this.getChild('-').definition);
-        }
+        if(this.checkChild('-'))toReturn.addAll(this.getChild('-').definition);
+        // cas d'arret s'il n'y a plus de child correspondant
         if(!this.checkChild(firstLetter)) return toReturn;
-
+        // remplissage récursif de la list toReturn
         toReturn.addAll(this.getChild(firstLetter).getWordTermination(word.substring(0, word.length() - 1)));
 
         return toReturn;

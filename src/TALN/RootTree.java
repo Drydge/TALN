@@ -26,9 +26,11 @@ public class RootTree {
         while ((line = br.readLine()) != null){
             String[] split = line.split(",");
             String[] roots = new String[split.length - 2];
+            int i=0;
             System.arraycopy(split, 2, roots, 0, split.length-2);
             for(String root: roots){
-                Word word = new Word(split[0],split[1],root);
+                i++;
+                Word word = new Word(split[0],split[1],root,i);
                 InsertRoot(toReturn, root+"-",word);
             }
         }
@@ -55,36 +57,26 @@ public class RootTree {
         }
     }
     private boolean checkChild(char c) {
-        for(RootTree child : this.children){
-            if(child.root == c){
+        for(RootTree child : this.children)
+            if(child.root == c)
                 return true;
-            }
-        }
         return false;
     }
     private RootTree getChild(char root){
-        for(RootTree child : this.children){
-            if(child.root == root){
+        for(RootTree child : this.children)
+            if(child.root == root)
                 return child;
-            }
-        }
         return null;
     }
 
     public ArrayList<Word> getWordRoot(String word) {
         ArrayList<Word> toReturn = new ArrayList<Word>();
-        if (!word.equals("")){
+        if (word.length()>0){
             char firstLetter =word.charAt(0);
-
-
-            if(this.checkChild('-')){
-                toReturn.addAll(this.getChild('-').definition);
-            }
+            if(this.checkChild('-'))toReturn.addAll(this.getChild('-').definition);
             if(!this.checkChild(firstLetter)) return toReturn;
-
             toReturn.addAll(this.getChild(firstLetter).getWordRoot(word.substring(1, word.length())));
         }
-
         return toReturn;
     }
 

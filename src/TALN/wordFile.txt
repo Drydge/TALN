@@ -12,4 +12,3 @@ chou,nom,ch
 bijou,nom,bij
 acteur,nom,act
 aviateur,nom,aviateur,aviat
-dentifrice,nom,dentifrice

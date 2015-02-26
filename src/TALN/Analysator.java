@@ -1,6 +1,7 @@
 package TALN;
 
-import java.io.IOException;
+import java.io.*;
+import java.lang.management.GarbageCollectorMXBean;
 import java.util.ArrayList;
 
 public class Analysator {
@@ -23,15 +24,31 @@ public class Analysator {
         }
         return _instance;
     }
-
-    public String analyze(String word){
-        ArrayList<Word> wordRoot= this.RTree.getWordRoot(word);
-        ArrayList<Grammaire>wordTerm=this.TTree.getWordTermination(word);
-        System.out.println(wordRoot);
-        System.out.println(wordTerm);
-
-
-        return "";
+    public void analyzeSRC(String src) throws IOException {
+        InputStream ips = new FileInputStream(src);
+        InputStreamReader ipsr = new InputStreamReader(ips);
+        BufferedReader br = new BufferedReader(ipsr);
+        String line;
+        while ((line = br.readLine()) != null){
+            String[] split = line.split(" ");
+            for(String word:split){
+                analyze(word);
+            }
+        }
+    }
+    public void analyze(String word){
+        ArrayList<Word> wordRoots= this.RTree.getWordRoot(word);
+        ArrayList<Grammaire>wordTerms=this.TTree.getWordTermination(word);
+        for (Word wroot:wordRoots){
+            String root=wroot.getRootString();
+            for (Grammaire wterm:wordTerms){
+                String term=wterm.getTerm();
+                String rootterm=root+term;
+                if(rootterm.equals(word)){
+                    System.out.println("("+word+")"+wroot.getWordString()+"=>"+wroot.getTypeString()+","+wterm);
+                }
+            }
+        }
     }
 
 }

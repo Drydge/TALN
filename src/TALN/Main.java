@@ -12,6 +12,7 @@ public class Main {
         }
         try {
             Analysator.getInstance().analyze(args[0]);
+            Analysator.getInstance().analyzeSRC("./src/TALN/src.txt");
 
         } catch (IOException e) {
             e.printStackTrace();

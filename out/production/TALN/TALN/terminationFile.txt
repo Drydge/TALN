@@ -6,8 +6,8 @@ verbe_conditionel_present,drais,drais,drait,drions,driez,driaient
 verbe_subjonctif_present,e,es,e,ions,iez,ent
 verbe_subjonctif_imparfait,sse,sses,t,ssions,ssiez,ssent
 nom_feminin_singulier,,e,rice,euse
-nom_masculin_singulier,,
+nom_masculin_singulier,,ou,eur
 nom_feminin_pluriel,s,es,euses,rices
-nom_masculin_pluriel,s
+nom_masculin_pluriel,s,oux,eurs
 nom_invariable,
 

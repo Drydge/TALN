@@ -7,6 +7,7 @@ public class RootTree {
     private char root;
     private ArrayList<RootTree> children;
     private ArrayList<Word> definition;
+
     public RootTree(){
         this.root='#';
         this.children=new ArrayList<RootTree>();
@@ -56,6 +57,7 @@ public class RootTree {
             InsertRoot(nextNode, root.substring(1, root.length()), word);
         }
     }
+
     private boolean checkChild(char c) {
         for(RootTree child : this.children)
             if(child.root == c)

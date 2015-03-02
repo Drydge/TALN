@@ -4,32 +4,37 @@ package TALN;
  * Created by Utilisateur on 25/02/2015.
  */
 public class Grammaire {
-    public int getNumPerson() {return person;}
-    public String getGroup() {return group;}
-    public String getTerm() {return term;}
 
-    public String getPerson() throws Exception {
-        switch (person){
-            case 1:return "(je)1ère personne du singulier";
-            case 2:return "(tu)2ème personne du singulier";
-            case 3:return "(il/elle)3ème personne du singulier";
-            case 4:return "(nous)1ère personne du pluriel";
-            case 5:return "(vous)2ème personne du pluriel";
-            case 6:return "(ils/elles)3ème personne du pluriel";
-            default: throw new Exception("bad person");
-        }
-    }
 
+    private final String tense;
     private final String group;
     private final int person;
     private final String term;
 
     public Grammaire(String group,String term, int index) {
         this.group = group;
+        this.tense = group.split("_",2)[1];
         this.person = index;
         this.term= term;
     }
 
+    public String getTense() {
+        return tense;
+    }
+    public int getNumPerson() {return this.person;}
+    public String getGroup() {return this.group;}
+    public String getTerm() {return this.term;}
+    public String getPerson() throws Exception {
+        switch (this.person){
+            case 1: return "(je)1ère personne du singulier";
+            case 2: return "(tu)2ème personne du singulier";
+            case 3: return "(il/elle)3ème personne du singulier";
+            case 4: return "(nous)1ère personne du pluriel";
+            case 5: return "(vous)2ème personne du pluriel";
+            case 6: return "(ils/elles)3ème personne du pluriel";
+            default: throw new Exception("wrong person");
+        }
+    }
 
     public WordType getWordType() throws Exception {
         switch (this.group.charAt(0)){

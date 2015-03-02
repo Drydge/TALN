@@ -1,4 +1,4 @@
-manger,verbe,manger,mange,mangi
+manger,verbe,manger,mange,mangi,mang
 venir,verbe,venir,vien,ven,vienn,vin,vîn
 tenir,verbe,venir,tien,ten,tienn,tin,tîn
 aimer,verbe,aimer,aim

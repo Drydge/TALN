@@ -2,16 +2,17 @@ package TALN;
 
 import java.io.*;
 import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 public class Conjugaison {
-    private Map<String,Map<String,String[]>> conjugaison;
+    private Map<String,Map<String,int[]>> conjugaison;
     private static Conjugaison _instance;
     private static String uri;
 
-    private Conjugaison(Map<String, Map<String, String[]>> conjugaison) {
+    private Conjugaison(Map<String, Map<String, int[]>> conjugaison) {
         this.conjugaison = conjugaison;
     }
 
@@ -28,37 +29,31 @@ public class Conjugaison {
 
     private static Conjugaison loadConjugaison() throws IOException {
         // Chargement du fichier de conjugaison dans le gros map
-        InputStream ips = new FileInputStream("./src/TALN/conjugaison.txt");
-        InputStreamReader ipsr = new InputStreamReader(ips);
-        BufferedReader br = new BufferedReader(ipsr);
+        BufferedReader br = Utils.getBufferedReaderFromStringPath("./src/TALN/conjugaison.txt");
         String line;
-        Conjugaison toReturn = new Conjugaison(new HashMap<String, Map<String, String[]>>(50));
+        String word="";
+        Conjugaison toReturn = new Conjugaison(new HashMap<String, Map<String, int[]>>(50));
         while((line=br.readLine())!=null){
             String[] split=line.split(",");
             String firstSplit=split[0];
-            String word=firstSplit;
-            if (firstSplit.charAt(0)=='-'){
-                String tense=firstSplit.substring(1,firstSplit.length()-1);
-                //rajouter un temps au verbe courant
-                String[] tabPerson;
-                toReturn.conjugaison.put(word, ));
-            else{
-                //nouveau mot
 
+            if(!(firstSplit.charAt(0) == '-')){
+                word = firstSplit;
+                toReturn.conjugaison.put(word, new HashMap<String, int[]>(10));
+            }
+            else {
+                String tense=firstSplit.substring(1,firstSplit.length());
+                //rajouter un temps au verbe courant
+                String[] tabPerson = Arrays.copyOfRange(split, 1,split.length-1);
+                toReturn.conjugaison.get(word).put(tense, Utils.convertStringArrayToIntArray(tabPerson));
             }
         }
         return toReturn;
     }
 
-    private String[] SubArray(String[] array, int first, int length){
 
-        String[] subarray = new String[0];
-        for (int i = 0; i <= length; i++) {
-            subarray[i]=array[first+i];
-        }
-        return subarray;
-    }
-    
+
+
     public boolean checkRoot(String wordString, String tense, int numPerson, String root) {
         return true;
         //return conjugaison.get(wordString).get(tense)[numPerson].equals(root);

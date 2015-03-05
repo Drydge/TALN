@@ -28,9 +28,7 @@ public class TerminationTree {
     }
 
     public static TerminationTree loadTerminationTree() throws IOException {
-        InputStream ips = new FileInputStream("./src/TALN/terminationFile.txt");
-        InputStreamReader ipsr = new InputStreamReader(ips);
-        BufferedReader br = new BufferedReader(ipsr);
+        BufferedReader br = Utils.getBufferedReaderFromStringPath("./src/TALN/terminationFile.txt");
         String line;
         TerminationTree toReturn = new TerminationTree();
         // Pour chaque ligne de notre fichier, nous voulons:

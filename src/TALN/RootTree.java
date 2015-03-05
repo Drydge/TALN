@@ -19,20 +19,18 @@ public class RootTree {
     }
 
     public static RootTree loadRootTree()throws IOException {
-        InputStream ips = new FileInputStream("./src/TALN/wordFile.txt");
-        InputStreamReader ipsr = new InputStreamReader(ips);
-        BufferedReader br = new BufferedReader(ipsr);
+        BufferedReader br = Utils.getBufferedReaderFromStringPath("./src/TALN/wordFile.txt");
         String line;
         RootTree toReturn=new RootTree();
         while ((line = br.readLine()) != null){
             String[] split = line.split(",");
             String[] roots = new String[split.length - 2];
-            int i=0;
+            int i=1;
             System.arraycopy(split, 2, roots, 0, split.length-2);
             for(String root: roots){
-                i++;
                 Word word = new Word(split[0],split[1],root,i);
                 InsertRoot(toReturn, root+"-",word);
+                i++;
             }
         }
         return toReturn;

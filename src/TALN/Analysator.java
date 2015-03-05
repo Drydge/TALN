@@ -27,9 +27,7 @@ public class Analysator {
         return _instance;
     }
     public void analyzeSRC(String src) throws IOException {
-        InputStream ips = new FileInputStream(src);
-        InputStreamReader ipsr = new InputStreamReader(ips);
-        BufferedReader br = new BufferedReader(ipsr);
+        BufferedReader br = Utils.getBufferedReaderFromStringPath(src);
         String line;
         while ((line = br.readLine()) != null){
             String[] split = line.split(" ");

@@ -1,0 +1,12 @@
+venir,
+-verbe_indicatif_present,1,1,1,2,2,3
+-verbe_indicatif_imparfait,2,2,2,2,2,2
+-verbe_indicatif_passesimple,4,4,4,5,5,4
+-verbe_indicatif_futur,1,1,1,1,1,1
+-verbe_conditionel_present,1,1,1,1,1,1
+-verbe_subjonctif_present,3,3,3,2,2,3
+-verbe_subjonctif_imparfait,4,4,5,4,4,4
+balle,nom,0,1,0,1
+arbre,nom,1,0,1,0
+acteur,nom,1,1,1,1
+voleur,nom,1,1,1,1

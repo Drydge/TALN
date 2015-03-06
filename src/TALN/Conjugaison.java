@@ -39,9 +39,11 @@ public class Conjugaison {
 
             if(!(firstSplit.charAt(0) == '-')){
                 word = firstSplit;
-                toReturn.conjugaison.put(word, new HashMap<String, int[]>(10));
-                //problèmes concernant les noms spécifique en eur ... ou rice ... ou
-                //feminin ou au pluriel .. (aucun numéro de racine)
+                HashMap<String, int[]> hashMap = new HashMap<String, int[]>(10);
+                if(split.length > 1){
+                    hashMap.put(split[1], Utils.convertStringArrayToIntArray(Arrays.copyOfRange(split, 2,split.length)));
+                }
+                toReturn.conjugaison.put(word, hashMap);
             }
             else {
                 String tense=firstSplit.substring(1,firstSplit.length());
@@ -55,9 +57,12 @@ public class Conjugaison {
 
 
 
-
-    public boolean checkRoot(String wordString, String tense, int numPerson, String root) {
-        return true;
-        //return conjugaison.get(wordString).get(tense)[numPerson].equals(root);
+    public boolean checkRoot(String wordString, String tense, int numPerson, int rootIndex) {
+        try{
+            return conjugaison.get(wordString).get(tense)[numPerson] == rootIndex;
+        }
+        catch(NullPointerException e){
+            return false;
+        }
     }
 }

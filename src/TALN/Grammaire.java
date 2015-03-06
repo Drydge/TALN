@@ -5,22 +5,16 @@ package TALN;
  */
 public class Grammaire {
 
-
-    private final String tense;
     private final String group;
     private final int person;
     private final String term;
 
     public Grammaire(String group,String term, int index) {
         this.group = group;
-        this.tense = group.split("_",2)[1];
         this.person = index;
         this.term= term;
     }
 
-    public String getTense() {
-        return tense;
-    }
     public int getNumPerson() {return this.person;}
     public String getGroup() {return this.group;}
     public String getTerm() {return this.term;}

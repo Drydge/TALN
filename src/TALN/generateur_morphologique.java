@@ -2,8 +2,10 @@ package TALN;
 
 import java.io.IOException;
 
-public class Main {
-
+/**
+ * Created by jdeveaux on 06/03/2015.
+ */
+public class generateur_morphologique {
     public static void main(String[] args) {
         if(args.length != 1){
             System.out.println("Usage");
@@ -11,6 +13,8 @@ public class Main {
             return;
         }
         try {
+            //si j'ai un fichier du nom args[0] => je lance analyzeSRC
+            //sinon j'analise le mot.
             Analysator.getInstance().analyze(args[0]);
             Analysator.getInstance().analyzeSRC("./src/TALN/src.txt");
 

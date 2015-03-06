@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3d20186-5613-4729-abfc-09eae20d299b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/TerminationTree.class" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/TerminationTree.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/Word.class" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/Word.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/Analysator.java" afterPath="$PROJECT_DIR$/src/TALN/Analysator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/RootTree.java" afterPath="$PROJECT_DIR$/src/TALN/RootTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/TerminationTree.java" afterPath="$PROJECT_DIR$/src/TALN/TerminationTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/Word.java" afterPath="$PROJECT_DIR$/src/TALN/Word.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/conjugaison.txt" afterPath="$PROJECT_DIR$/src/TALN/conjugaison.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/terminationFile.txt" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/terminationFile.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/terminationFile.txt" afterPath="$PROJECT_DIR$/src/TALN/terminationFile.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/wordFile.txt" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/wordFile.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/wordFile.txt" afterPath="$PROJECT_DIR$/src/TALN/wordFile.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/Grammaire.java" afterPath="$PROJECT_DIR$/src/TALN/Grammaire.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TALN.iws" />
@@ -62,18 +55,18 @@
       <file leaf-file-name="Grammaire.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TALN/Grammaire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1242">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="607" max-vertical-offset="1800">
+              <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Word.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Word.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TALN/Word.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10185185" vertical-offset="13" max-vertical-offset="918">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,7 +75,7 @@
       <file leaf-file-name="TerminationTree.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TALN/TerminationTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1800">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800">
               <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -137,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Analysator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Analysator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TALN/Analysator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1098">
-              <caret line="22" column="13" selection-start-line="21" selection-start-column="17" selection-end-line="22" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.8637566" vertical-offset="193" max-vertical-offset="1098">
+              <caret line="48" column="71" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -175,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/TALN/WordType.java" />
         <option value="$PROJECT_DIR$/src/TALN/Utils.java" />
         <option value="$PROJECT_DIR$/src/TALN/src.txt" />
-        <option value="$PROJECT_DIR$/src/TALN/Grammaire.java" />
         <option value="$PROJECT_DIR$/src/TALN/Main.java" />
         <option value="$PROJECT_DIR$/src/TALN/analyseMorphologique.java" />
         <option value="$PROJECT_DIR$/src/TALN/generateur_morphologique.java" />
@@ -185,8 +177,9 @@
         <option value="$PROJECT_DIR$/src/TALN/conjugaison.txt" />
         <option value="$PROJECT_DIR$/src/TALN/terminationFile.txt" />
         <option value="$PROJECT_DIR$/src/TALN/wordFile.txt" />
-        <option value="$PROJECT_DIR$/src/TALN/Analysator.java" />
         <option value="$PROJECT_DIR$/src/TALN/Word.java" />
+        <option value="$PROJECT_DIR$/src/TALN/Grammaire.java" />
+        <option value="$PROJECT_DIR$/src/TALN/Analysator.java" />
       </list>
     </option>
   </component>
@@ -550,7 +543,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425658309989</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="mise a jour des fichier txt et corection ajout de commentaire pour lorganisation des fichier texte">
+      <created>1425661655604</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1425661655604</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -575,11 +574,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1599" y="0" width="1922" height="1081" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3260274" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3254818" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -587,7 +586,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38008565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2869063" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32776618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32762313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32441112" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20660277" sideWeight="0.50104386" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -596,7 +595,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15601704" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15952891" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15952891" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -663,7 +662,8 @@
     <MESSAGE value="nouvelle methode pour analyse des mots" />
     <MESSAGE value="mise a jour de Word et RootTree" />
     <MESSAGE value="Chargement de la map de conjugaison améliorée" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chargement de la map de conjugaison améliorée" />
+    <MESSAGE value="mise a jour des fichier txt et corection ajout de commentaire pour lorganisation des fichier texte" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise a jour des fichier txt et corection ajout de commentaire pour lorganisation des fichier texte" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1003,18 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TALN/TerminationTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1800">
-          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#checkChild#0;class#TerminationTree#0" expanded="false" />
-            <element signature="method#getChild#0;class#TerminationTree#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TALN/RootTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1602">
@@ -1083,14 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TALN/Grammaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="481" max-vertical-offset="1173">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TALN/Conjugaison.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="365" max-vertical-offset="1404">
@@ -1101,18 +1081,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TALN/Analysator.java">
+    <entry file="file://$PROJECT_DIR$/src/TALN/Word.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1098">
-          <caret line="22" column="13" selection-start-line="21" selection-start-column="17" selection-end-line="22" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TALN/Word.java">
+    <entry file="file://$PROJECT_DIR$/src/TALN/TerminationTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10185185" vertical-offset="13" max-vertical-offset="918">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1800">
+          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#checkChild#0;class#TerminationTree#0" expanded="false" />
+            <element signature="method#getChild#0;class#TerminationTree#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TALN/Grammaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="607" max-vertical-offset="1800">
+          <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TALN/Analysator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8637566" vertical-offset="193" max-vertical-offset="1098">
+          <caret line="48" column="71" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="71" />
           <folding />
         </state>
       </provider>

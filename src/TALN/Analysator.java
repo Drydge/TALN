@@ -45,9 +45,9 @@ public class Analysator {
                 String rootterm=root+term;
                 // Tester fichier de conjugaison ici pour vérifier que la racine correspond au temps utilisé
                 if(rootterm.equals(word) && c.checkRoot(wroot.getWord(),wterm.getGroup(),wterm.getNumPerson(),wroot.getNumRoot())){
-                    if (wroot.getType().equals("verbe")){
-                        System.out.println("("+word+")"+wroot.getWord()+"=>"+wroot.getType()+","+wterm);
-                    }else System.out.println("("+word+")"+wroot.getWord()+"=>"+wroot.getType());
+
+                    System.out.println("("+word+")"+wroot.getWord()+"=>"+wterm);
+
                 }
             }
         }

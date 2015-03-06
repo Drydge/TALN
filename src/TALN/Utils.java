@@ -5,9 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 
-/**
- * Created by jdeveaux on 05/03/2015.
- */
 public final class Utils {
     public static int[] convertStringArrayToIntArray(String[] stringArray){
         int[] numbers = new int[stringArray.length];

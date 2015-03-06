@@ -40,6 +40,8 @@ public class Conjugaison {
             if(!(firstSplit.charAt(0) == '-')){
                 word = firstSplit;
                 toReturn.conjugaison.put(word, new HashMap<String, int[]>(10));
+                //problèmes concernant les noms spécifique en eur ... ou rice ... ou
+                //feminin ou au pluriel .. (aucun numéro de racine)
             }
             else {
                 String tense=firstSplit.substring(1,firstSplit.length());

@@ -35,16 +35,20 @@ public class TerminationTree {
         // 1 - récupérer toutes les terminaisons et les inscrire dans l'arbre
         // 2 - flaguer la feuille comme terminaison d'un groupe ( nom féminin, nom singulier, verbe du premier groupe, etc )
         while ((line = br.readLine()) != null){
-            String[] split = line.split(",");
-            String group = split[0];
-            String[] terminations = new String[split.length - 1];
-            System.arraycopy(split, 1, terminations, 0, split.length - 1);
-            int index = 1;
-            for(String termination: terminations){
-                // - Vérifier si l'un des fils correspond à la dernière lettre de la terminaison
-                Grammaire grammar = new Grammaire(group,termination ,index);
-                InsertTermination(toReturn, '-'+termination, grammar);
-                index ++;
+            line=line.replaceAll("\t","");
+            line=line.replaceAll(" ","");
+            if (!line.equals("")||line.charAt(0)!='#'){
+                String[] split = line.split(",");
+                String group = split[0];
+                String[] terminations = new String[split.length - 1];
+                System.arraycopy(split, 1, terminations, 0, split.length - 1);
+                int index = 1;
+                for(String termination: terminations){
+                    // - Vérifier si l'un des fils correspond à la dernière lettre de la terminaison
+                    Grammaire grammar = new Grammaire(group,termination ,index);
+                    InsertTermination(toReturn, '-'+termination, grammar);
+                    index ++;
+                }
             }
         }
 

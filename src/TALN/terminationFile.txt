@@ -1,16 +1,33 @@
+#VERBE INDICATIF
+#   PRÉSENT
 verbe_indicatif_present_1er_groupe,e,es,e,ons,ez,ent
 verbe_indicatif_present_2eme_groupe,is,is,it,issons,issez,issent
+verbe_indicatif_present_3eme_groupe_t,s,s,t,ons,ez,ent
+verbe_indicatif_present_3eme_groupe_d,s,s,d,ons,ez,ent
 
-
+#   IMPARFAIT
 verbe_indicatif_imparfait,ais,ais,ait,ions,iez,aient
 
+#   PASSÉ SIMPLE
 verbe_indicatif_passe_simple_1er_groupe,ai,as,a,âmes,âtes,èrent
-
 verbe_indicatif_passesimple,s,s,t,mes,tes,rent
+
+#   FUTURE
 verbe_indicatif_futur,ai,as,a,ons,ez,ont
+
+
+#VERBE CONDITIONEL
+#   PRÉSENT
 verbe_conditionel_present,rais,rais,rait,rions,riez,raient
+
+
+#VERBE SUBJONCTIF
+#   PRESENT
 verbe_subjonctif_present,e,es,e,ions,iez,ent
+#   IMPARFAIT
 verbe_subjonctif_imparfait,sse,sses,t,ssions,ssiez,ssent
+
+
 nom_normal,,e,s,es
 nom_eur_euse,eur,euse,eurs,euses
 nom_eur_rice,eur,rice,eurs,rices
@@ -23,5 +40,13 @@ nom_au_exception,au,au,aus,aus
 nom_ail,ail,ail,ails,ails
 nom_ail_exception,ail,ail,aux,aux
 
+adjectifs,
+
+
 nom_invariable,
+déterminant,
+pronom,
+nom_propre,
+adverbe,
+
 

@@ -34,22 +34,28 @@ public class Conjugaison {
         String word="";
         Conjugaison toReturn = new Conjugaison(new HashMap<String, Map<String, int[]>>(50));
         while((line=br.readLine())!=null){
-            String[] split=line.split(",");
-            String firstSplit=split[0];
+            line=line.replaceAll("\t","");
+            line=line.replaceAll(" ","");
+            if (!line.isEmpty()&&line.charAt(0)!='#')
+            {
 
-            if(!(firstSplit.charAt(0) == '-')){
-                word = firstSplit;
-                HashMap<String, int[]> hashMap = new HashMap<String, int[]>(10);
-                if(split.length > 1){
-                    hashMap.put(split[1], Utils.convertStringArrayToIntArray(Arrays.copyOfRange(split, 2,split.length)));
+                String[] split = line.split(",");
+                String firstSplit = split[0];
+
+                if (!(firstSplit.charAt(0) == '-')) {
+                    word = firstSplit;
+                    HashMap<String, int[]> hashMap = new HashMap<String, int[]>(10);
+                    if (split.length > 1) {
+                        hashMap.put(split[1], Utils.convertStringArrayToIntArray(Arrays.copyOfRange(split, 2, split.length)));
+                    }
+                    toReturn.conjugaison.put(word, hashMap);
+                } else {
+                    String tense = firstSplit.substring(1, firstSplit.length());
+                    //rajouter un temps au verbe courant
+                    String[] tabPerson = Arrays.copyOfRange(split, 1, split.length - 1);
+                    toReturn.conjugaison.get(word).put(tense, Utils.convertStringArrayToIntArray(tabPerson));
                 }
-                toReturn.conjugaison.put(word, hashMap);
-            }
-            else {
-                String tense=firstSplit.substring(1,firstSplit.length());
-                //rajouter un temps au verbe courant
-                String[] tabPerson = Arrays.copyOfRange(split, 1,split.length-1);
-                toReturn.conjugaison.get(word).put(tense, Utils.convertStringArrayToIntArray(tabPerson));
+
             }
         }
         return toReturn;

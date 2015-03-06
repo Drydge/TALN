@@ -23,14 +23,21 @@ public class RootTree {
         String line;
         RootTree toReturn=new RootTree();
         while ((line = br.readLine()) != null){
-            String[] split = line.split(",");
-            String[] roots = new String[split.length - 2];
-            int i=1;
-            System.arraycopy(split, 2, roots, 0, split.length-2);
-            for(String root: roots){
-                Word word = new Word(split[0],split[1],root,i);
-                InsertRoot(toReturn, root+"-",word);
-                i++;
+            line=line.replaceAll("\t","");
+            line=line.replaceAll(" ","");
+            if (!line.equals("")){
+                if (line.charAt(0)!='#'){
+
+                    String[] split = line.split(",");
+                    String[] roots = new String[split.length - 2];
+                    int i=1;
+                    System.arraycopy(split, 2, roots, 0, split.length-2);
+                    for(String root: roots){
+                        Word word = new Word(split[0],split[1],root,i);
+                        InsertRoot(toReturn, root+"-",word);
+                        i++;
+                    }
+                }
             }
         }
         return toReturn;

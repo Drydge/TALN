@@ -1,31 +1,40 @@
+#PARTICIPE PASSÉ
+    #1er groupe
+        verbe_participe_passe_masculin_singulier,é,i,s,,us
+        verbe_participe_passe_masculin_pluriel,és,is,s,s,us
+        verbe_participe_passe_feminin_singulier,ée,ie,se,s,ute
+        verbe_participe_passe_feminin_pluriel,ées,ies,ses,es,utes
+
 #VERBE INDICATIF
-#   PRÉSENT
-verbe_indicatif_present_1er_groupe,e,es,e,ons,ez,ent
-verbe_indicatif_present_2eme_groupe,is,is,it,issons,issez,issent
-verbe_indicatif_present_3eme_groupe_t,s,s,t,ons,ez,ent
-verbe_indicatif_present_3eme_groupe_d,s,s,d,ons,ez,ent
+    #PRÉSENT
+        verbe_indicatif_present_1er_groupe,e,es,e,ons,ez,ent
+        verbe_indicatif_present_2eme_groupe,is,is,it,issons,issez,issent
+        verbe_indicatif_present_3eme_groupe_t,s,s,t,ons,ez,ent
+        verbe_indicatif_present_3eme_groupe_d,s,s,d,ons,ez,ent
 
-#   IMPARFAIT
-verbe_indicatif_imparfait,ais,ais,ait,ions,iez,aient
+    #IMPARFAIT
+        verbe_indicatif_imparfait,ais,ais,ait,ions,iez,aient
 
-#   PASSÉ SIMPLE
-verbe_indicatif_passe_simple_1er_groupe,ai,as,a,âmes,âtes,èrent
-verbe_indicatif_passesimple,s,s,t,mes,tes,rent
+    #PASSÉ SIMPLE
+        verbe_indicatif_passe_simple_1er_groupe,ai,as,a,âmes,âtes,èrent
+        verbe_indicatif_passesimple,s,s,t,mes,tes,rent
 
-#   FUTURE
-verbe_indicatif_futur,ai,as,a,ons,ez,ont
+    #FUTURE
+        verbe_indicatif_futur,rai,ras,ra,rons,rez,ront
 
 
 #VERBE CONDITIONEL
-#   PRÉSENT
-verbe_conditionel_present,rais,rais,rait,rions,riez,raient
+    #PRÉSENT
+        verbe_conditionel_present,rais,rais,rait,rions,riez,raient
 
 
 #VERBE SUBJONCTIF
-#   PRESENT
-verbe_subjonctif_present,e,es,e,ions,iez,ent
-#   IMPARFAIT
-verbe_subjonctif_imparfait,sse,sses,t,ssions,ssiez,ssent
+    #PRESENT
+        verbe_subjonctif_present,e,es,e,ions,iez,ent
+    #IMPARFAIT
+        verbe_subjonctif_imparfait_1er_groupe,sse,sses,ât,ssions,ssiez,ssent
+        verbe_subjonctif_imparfait_2/3eme_groupe,sse,sses,ît,ssions,ssiez,ssent
+        verbe_subjonctif_imparfait_3eme_groupe,sse,sses,ût,ssions,ssiez,ssent
 
 
 nom_normal,,e,s,es

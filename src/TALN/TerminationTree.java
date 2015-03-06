@@ -37,7 +37,7 @@ public class TerminationTree {
         while ((line = br.readLine()) != null){
             line=line.replaceAll("\t","");
             line=line.replaceAll(" ","");
-            if (!line.equals("")||line.charAt(0)!='#'){
+            if (!line.isEmpty()&&line.charAt(0)!='#'){
                 String[] split = line.split(",");
                 String group = split[0];
                 String[] terminations = new String[split.length - 1];

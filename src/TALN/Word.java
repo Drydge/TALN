@@ -1,11 +1,9 @@
 package TALN;
 
-import java.util.ArrayList;
-
 public class Word {
-    public String getTypeString() {return this.Type;}
-    public String getWordString() {return this.Word;}
-    public String getRootString() {return this.Root;}
+    public String getType() {return this.Type;}
+    public String getWord() {return this.Word;}
+    public String getRoot() {return this.Root;}
     public int getNumRoot(){return this.numRoot;}
     private String Word;
     private String Type;
@@ -21,7 +19,7 @@ public class Word {
     }
 
     public void getWordTermination(){
-        String word= this.getWordString();
+        String word= this.getWord();
         for (int i = word.length(); i < 0  ; i++) {
             // word.charAt();
         }
@@ -35,9 +33,9 @@ public class Word {
 
     public String toString(){
         if (Type.equals("verbe")) {
-            return this.getWordString() + ":" + this.getTypeString() + "\t" + "(" + this.numRoot + ")" + this.getRootString();
+            return this.getWord() + ":" + this.getType() + "\t" + "(" + this.numRoot + ")" + this.getRoot();
         } else if (Type.equals("nom")) {
-            return this.getWordString() + ":" + this.getTypeString() + "\t";
+            return this.getWord() + ":" + this.getType() + "\t";
         } else {
             return "erreur de type";
         }

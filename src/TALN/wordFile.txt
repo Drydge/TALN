@@ -1,12 +1,17 @@
+        #VERBE
+
 manger,verbe,manger,mange,mangi,mang
-
-# fezf
-
 venir,verbe,vien,ven,vienn,vin,vîn
 tenir,verbe,tien,ten,tienn,tin,tîn
 aimer,verbe,aimer,aim
 créer,verbe,cré
 apprécier,verbe,appréci
+prévoir,verbe,prévoi,prévoy
+mordre,verbe,mord
+mettre,verbe,met,mett
+joindre,verbe,join,joign
+
+        #NOM
 arbre,nom_normal,arbre
 cou,nom_normal,cou
 balle,nom_normal,ball
@@ -16,7 +21,4 @@ bijou,nom_ou_exception,bij
 acteur,nom_eur_rice,act
 aviateur,nom_eur_rice,aviat
 voleur,nom_eur_euse,vol
-prévoir,verbe,prévoi,prévoy
-mordre,verbe,mord
-mettre,verbe,met,mett
-joindre,verbe,join,joign
+

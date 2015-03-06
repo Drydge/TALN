@@ -1,9 +1,7 @@
 package TALN;
 
 import java.io.*;
-import java.lang.management.GarbageCollectorMXBean;
 import java.util.ArrayList;
-import java.util.Map;
 
 public class Analysator {
     private TerminationTree TTree;
@@ -41,14 +39,15 @@ public class Analysator {
         ArrayList<Word> wordRoots= this.RTree.getWordRoot(word);
         ArrayList<Grammaire>wordTerms=this.TTree.getWordTermination(word);
         for (Word wroot:wordRoots){
-            String root=wroot.getRootString();
+            String root=wroot.getRoot();
             for (Grammaire wterm:wordTerms){
                 String term=wterm.getTerm();
                 String rootterm=root+term;
                 // Tester fichier de conjugaison ici pour vérifier que la racine correspond au temps utilisé
-                if(rootterm.equals(word) && c.checkRoot(wroot.getWordString(),wterm.getGroup(),wterm.getNumPerson(),wroot.getNumRoot())){
-
-                    System.out.println("("+word+")"+wroot.getWordString()+"=>"+wroot.getTypeString()+","+wterm);
+                if(rootterm.equals(word) && c.checkRoot(wroot.getWord(),wterm.getGroup(),wterm.getNumPerson(),wroot.getNumRoot())){
+                    if (wroot.getType().equals("verbe")){
+                        System.out.println("("+word+")"+wroot.getWord()+"=>"+wroot.getType()+","+wterm);
+                    }else System.out.println("("+word+")"+wroot.getWord()+"=>"+wroot.getType());
                 }
             }
         }

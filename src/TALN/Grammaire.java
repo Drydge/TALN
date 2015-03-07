@@ -1,8 +1,5 @@
 package TALN;
 
-/**
- * Created by Utilisateur on 25/02/2015.
- */
 public class Grammaire {
 
     private final String group;

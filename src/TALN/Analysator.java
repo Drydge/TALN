@@ -45,9 +45,7 @@ public class Analysator {
                 String rootterm=root+term;
                 // Tester fichier de conjugaison ici pour vérifier que la racine correspond au temps utilisé
                 if(rootterm.equals(word) && c.checkRoot(wroot.getWord(),wterm.getGroup(),wterm.getNumPerson(),wroot.getNumRoot())){
-
                     System.out.println("("+word+")"+wroot.getWord()+"=>"+wterm);
-
                 }
             }
         }

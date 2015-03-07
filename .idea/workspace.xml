@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3d20186-5613-4729-abfc-09eae20d299b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/Analysator.java" afterPath="$PROJECT_DIR$/src/TALN/Analysator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/Grammaire.java" afterPath="$PROJECT_DIR$/src/TALN/Grammaire.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TALN.iws" />
@@ -564,7 +562,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425662968277</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="modif nom pour reconnaissance feminin/masculin singulier pluriel">
+      <created>1425761282274</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1425761282274</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">

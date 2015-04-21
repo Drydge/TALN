@@ -75,15 +75,22 @@ public class RootTree {
         return null;
     }
 
-    public ArrayList<Word> getWordRoot(String word) {
+    public ArrayList<Word> getWordRoots(String word) {
         ArrayList<Word> toReturn = new ArrayList<Word>();
         if (word.length()>0){
             char firstLetter =word.charAt(0);
             if(this.checkChild('-'))toReturn.addAll(this.getChild('-').definition);
             if(!this.checkChild(firstLetter)) return toReturn;
-            toReturn.addAll(this.getChild(firstLetter).getWordRoot(word.substring(1, word.length())));
+            toReturn.addAll(this.getChild(firstLetter).getWordRoots(word.substring(1, word.length())));
         }
         return toReturn;
     }
+
+    public Word getWordRoot(String word, int person) {
+        ArrayList<Word> w = getWordRoots(word);
+        return null;
+    }
+
+
 
 }

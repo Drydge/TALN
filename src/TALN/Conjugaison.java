@@ -1,11 +1,8 @@
 package TALN;
 
-import java.io.*;
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.ExecutionException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.*;
 
 public class Conjugaison {
     private Map<String,Map<String,int[]>> conjugaison;
@@ -52,7 +49,7 @@ public class Conjugaison {
                 } else {
                     String tense = firstSplit.substring(1, firstSplit.length());
                     //rajouter un temps au verbe courant
-                    String[] tabPerson = Arrays.copyOfRange(split, 1, split.length - 1);
+                    String[] tabPerson = Arrays.copyOfRange(split, 1, split.length);
                     toReturn.conjugaison.get(word).put(tense, Utils.convertStringArrayToIntArray(tabPerson));
                 }
 
@@ -63,12 +60,27 @@ public class Conjugaison {
 
 
 
-    public boolean checkRoot(String wordString, String tense, int numPerson, int rootIndex) {
+    public boolean checkRoot(String wordString, String tense, int personNumber, int rootIndex) {
         try{
-            return conjugaison.get(wordString).get(tense)[numPerson] == rootIndex;
+            return conjugaison.get(wordString).get(tense)[personNumber] == rootIndex;
         }
         catch(NullPointerException e){
             return false;
         }
+    }
+
+    public int getRootNumber(String wordRoot, String tense, int personNumber ){
+        Map wordMap = this.conjugaison.get(wordRoot);
+        Set<String> tenses= wordMap.keySet();
+
+        Iterator iterator = tenses.iterator();
+        while (iterator.hasNext())
+        {
+            String key = iterator.next().toString();
+            if(key.contains(tense)){
+                return ((int[]) wordMap.get(key))[personNumber -1];
+            }
+        }
+        return -1;
     }
 }

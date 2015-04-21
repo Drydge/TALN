@@ -36,7 +36,7 @@ public class Analysator {
     }
 
     public void analyze(String word){
-        ArrayList<Word> wordRoots= this.RTree.getWordRoot(word);
+        ArrayList<Word> wordRoots= this.RTree.getWordRoots(word);
         ArrayList<Grammaire>wordTerms=this.TTree.getWordTermination(word);
         for (Word wroot:wordRoots){
             String root=wroot.getRoot();
@@ -51,4 +51,13 @@ public class Analysator {
         }
     }
 
+    public void generate(String word, String tense, int personNumber){
+        try {
+            int rootNumber = Conjugaison.getInstance().getRootNumber(word,tense,personNumber);
+            Word wordRoot = this.RTree.getWordRoot(word, rootNumber);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

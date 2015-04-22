@@ -12,13 +12,13 @@ mettre,verbe,met,mett
 joindre,verbe,join,joign
 
         #NOM
-arbre,nom_normal,arbre
-cou,nom_normal,cou
-balle,nom_normal,ball
-lune,nom_normal,lun
+arbre,nom_masculin,arbre
+cou,nom_masculin,cou
+balle,nom_feminin,ball
+lune,nom_feminin,lun
 chou,nom_ou_exception,ch
 bijou,nom_ou_exception,bij
 acteur,nom_eur_rice,act
 aviateur,nom_eur_rice,aviat
 voleur,nom_eur_euse,vol
-
+méchant,adjectif,méchant

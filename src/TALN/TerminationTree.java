@@ -121,11 +121,25 @@ public class TerminationTree {
     public String getOneTerm(String type, String tense,int personNumber){
         ArrayList<Grammaire> allGram = this.getAllGrammaire();
         String term="";
-        for (Grammaire gram : allGram){
-            String gramGroup = gram.getGroup();
-            if (gram.getNumPerson()==personNumber && gramGroup.contains(tense) && gramGroup.contains(type)){
-                term=gram.getTerm();
-                return term;
+        if(!type.contains("verbe")){
+            for (Grammaire gram : allGram){
+                String gramGroup = gram.getGroup();
+                    if (gram.getNumPerson()==personNumber && gramGroup.contains(type)){
+                        if (tense.contains("masculin")&&gram.getGroup().contains("feminin"))
+                            System.out.println("erreur :le mot est feminin generation pour le feminin");
+                        if (tense.contains("feminin")&&gram.getGroup().contains("masculin"))
+                            System.out.println("erreur :le mot est masculin generation pour le masculin");
+                        term=gram.getTerm();
+                        return term;
+                    }
+            }
+        }else{
+            for (Grammaire gram : allGram){
+                String gramGroup = gram.getGroup();
+                if (gram.getNumPerson()==personNumber && gramGroup.contains(tense) && gramGroup.contains(type)){
+                    term=gram.getTerm();
+                    return term;
+                }
             }
         }
         return term;

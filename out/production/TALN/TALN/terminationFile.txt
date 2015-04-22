@@ -37,7 +37,8 @@
         verbe_subjonctif_imparfait_3eme_groupe,sse,sses,ût,ssions,ssiez,ssent
 
 
-nom_normal,,e,s,es
+nom_masculin,,,s,s
+nom_feminin,e,e,es,es
 nom_eur_euse,eur,euse,eurs,euses
 nom_eur_rice,eur,rice,eurs,rices
 nom_ou,ou,oue,ous,oues
@@ -49,8 +50,7 @@ nom_au_exception,au,au,aus,aus
 nom_ail,ail,ail,ails,ails
 nom_ail_exception,ail,ail,aux,aux
 
-adjectifs,
-
+adjectifs,,e,s,es
 
 nom_invariable,
 déterminant,

@@ -1,5 +1,5 @@
-balle,nom_normal,0,1,0,1
-arbre,nom_normal,1,0,1,0
+balle,nom_feminin,0,1,0,1
+arbre,nom_feminin,1,0,1,0
 acteur,nom_eur_rice,1,1,1,1
 voleur,nom_eur_euse,1,1,1,1
 méchant,adjectif,1,1,1,1

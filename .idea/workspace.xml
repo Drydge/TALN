@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3d20186-5613-4729-abfc-09eae20d299b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/Conjugaison.class" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/Conjugaison.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/Word.class" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/Word.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/generateur_morphologique.class" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/generateur_morphologique.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/Analysator.java" afterPath="$PROJECT_DIR$/src/TALN/Analysator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/Conjugaison.java" afterPath="$PROJECT_DIR$/src/TALN/Conjugaison.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/TerminationTree.java" afterPath="$PROJECT_DIR$/src/TALN/TerminationTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/Word.java" afterPath="$PROJECT_DIR$/src/TALN/Word.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/conjugaison.txt" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/conjugaison.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/generateur_morphologique.java" afterPath="$PROJECT_DIR$/src/TALN/generateur_morphologique.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/wordFile.txt" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/wordFile.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/Analysator.class" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/Analysator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/TerminationTree.class" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/TerminationTree.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TALN.iws" />
@@ -218,8 +210,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="109" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
@@ -577,7 +569,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="109" width="1936" height="1066" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3254818" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />

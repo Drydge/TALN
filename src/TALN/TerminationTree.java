@@ -73,7 +73,10 @@ public class TerminationTree {
             InsertTermination(nextNode, termination.substring(0, termination.length() - 1), grammar);
         }
     }
-
+    private boolean haveChildren() {
+        if (this.children.isEmpty()){return false;}
+        return true;
+    }
     private boolean checkChild(char c) {
         // verification dans les child le noeud de racine 'c' existe
         for(TerminationTree child : this.children)
@@ -102,6 +105,29 @@ public class TerminationTree {
         toReturn.addAll(this.getChild(firstLetter).getWordTermination(word.substring(0, word.length() - 1)));
 
         return toReturn;
+    }
+
+    private ArrayList<Grammaire> getAllGrammaire(){
+        ArrayList<Grammaire> allGram=new ArrayList<Grammaire>();
+
+        if (this.haveChildren()){
+            if(this.checkChild('-'))allGram.addAll(this.getChild('-').definition);
+            for (int i = 0; i < this.children.size(); i++) {
+                allGram.addAll(this.children.get(i).getAllGrammaire());
+            }
+        }
+        return allGram;
+    }
+    public String getOneTerm(String tense,int personNumber){
+        ArrayList<Grammaire> allGram = this.getAllGrammaire();
+        String term="";
+        for (Grammaire gram : allGram){
+            if (gram.getNumPerson()==personNumber && gram.getGroup().contains(tense)){
+                term=gram.getTerm();
+                return term;
+            }
+        }
+        return term;
     }
 }
 

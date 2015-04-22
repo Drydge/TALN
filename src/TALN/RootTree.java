@@ -1,6 +1,7 @@
 package TALN;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class RootTree {
@@ -62,6 +63,10 @@ public class RootTree {
         }
     }
 
+    private boolean haveChildren() {
+        if (this.children.isEmpty()){return false;}
+        return true;
+    }
     private boolean checkChild(char c) {
         for(RootTree child : this.children)
             if(child.root == c)
@@ -85,9 +90,26 @@ public class RootTree {
         }
         return toReturn;
     }
+    public ArrayList<Word> getAllRoot(){
+        ArrayList<Word> allRoot=new ArrayList<Word>();
 
+        if (this.haveChildren()){
+            if(this.checkChild('-'))allRoot.addAll(this.getChild('-').definition);
+            for (int i = 0; i < this.children.size(); i++) {
+                allRoot.addAll(this.children.get(i).getAllRoot());
+            }
+        }
+
+        return allRoot;
+    }
     public Word getWordRoot(String word, int person) {
-        ArrayList<Word> w = getWordRoots(word);
+        ArrayList<Word> w = this.getAllRoot();
+
+        for (Word aWord : w){
+            if (aWord.getWord().equals(word)&&aWord.getNumRoot()==person){
+                return aWord;
+            }
+        }
         return null;
     }
 

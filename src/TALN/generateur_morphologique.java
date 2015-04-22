@@ -3,9 +3,6 @@ package TALN;
 import java.io.IOException;
 import static java.lang.Integer.parseInt;
 
-/**
- * Created by jdeveaux on 06/03/2015.
- */
 public class generateur_morphologique {
     public static void main(String[] args) throws IOException {
         if(args.length != 3){

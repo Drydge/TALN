@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3d20186-5613-4729-abfc-09eae20d299b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TALN/analyse_generation/dictionnaire.pl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/Analysator.class" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/Analysator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/Conjugaison.class" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/Conjugaison.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/TerminationTree.class" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/TerminationTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/Analysator.java" afterPath="$PROJECT_DIR$/src/TALN/Analysator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/TerminationTree.java" afterPath="$PROJECT_DIR$/src/TALN/TerminationTree.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/conjugaison.txt" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/conjugaison.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/conjugaison.txt" afterPath="$PROJECT_DIR$/src/TALN/conjugaison.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/terminationFile.txt" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/terminationFile.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/terminationFile.txt" afterPath="$PROJECT_DIR$/src/TALN/terminationFile.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TALN/TALN/wordFile.txt" afterPath="$PROJECT_DIR$/out/production/TALN/TALN/wordFile.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALN/wordFile.txt" afterPath="$PROJECT_DIR$/src/TALN/wordFile.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TALN.iws" />
@@ -156,7 +150,7 @@
       <file leaf-file-name="dictionnaire.pl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TALN/analyse_generation/dictionnaire.pl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="751">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -692,7 +686,7 @@
       <updated>1424432369187</updated>
       <workItem from="1429709771055" duration="1672000" />
       <workItem from="1429714109733" duration="2313000" />
-      <workItem from="1429725150216" duration="1160000" />
+      <workItem from="1429725150216" duration="1199000" />
     </task>
     <task id="LOCAL-00001" summary="add Termination tree with a null pointer bug&#10;">
       <created>1424468425689</created>
@@ -772,11 +766,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425761282274</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="finnissions projet TALN en JAVA et debut du projet prolog">
+      <created>1429726578210</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1429726578210</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5145000" />
+    <option name="totallyTimeSpent" value="5184000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -800,7 +800,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1602" height="877" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -811,10 +811,11 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32820514" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2869063" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32762313" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359082" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20731707" sideWeight="0.49895614" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -828,7 +829,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3923077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34615386" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359082" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -860,7 +860,8 @@
     <MESSAGE value="Chargement de la map de conjugaison améliorée" />
     <MESSAGE value="mise a jour des fichier txt et corection ajout de commentaire pour lorganisation des fichier texte" />
     <MESSAGE value="modif nom pour reconnaissance feminin/masculin singulier pluriel" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif nom pour reconnaissance feminin/masculin singulier pluriel" />
+    <MESSAGE value="finnissions projet TALN en JAVA et debut du projet prolog" />
+    <option name="LAST_COMMIT_MESSAGE" value="finnissions projet TALN en JAVA et debut du projet prolog" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

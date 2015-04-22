@@ -118,11 +118,12 @@ public class TerminationTree {
         }
         return allGram;
     }
-    public String getOneTerm(String tense,int personNumber){
+    public String getOneTerm(String type, String tense,int personNumber){
         ArrayList<Grammaire> allGram = this.getAllGrammaire();
         String term="";
         for (Grammaire gram : allGram){
-            if (gram.getNumPerson()==personNumber && gram.getGroup().contains(tense)){
+            String gramGroup = gram.getGroup();
+            if (gram.getNumPerson()==personNumber && gramGroup.contains(tense) && gramGroup.contains(type)){
                 term=gram.getTerm();
                 return term;
             }

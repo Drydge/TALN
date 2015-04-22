@@ -70,15 +70,19 @@ public class Conjugaison {
     }
 
     public int getRootNumber(String wordRoot, String tense, int personNumber ){
-        Map wordMap = this.conjugaison.get(wordRoot);
-        Set<String> tenses= wordMap.keySet();
+        HashMap wordMap = (HashMap) this.conjugaison.get(wordRoot);
+        if(tense.equals("masculin") || tense.equals("feminin")) {
+            return 1;
+        }
+        else {
+            Set<String> tenses = wordMap.keySet();
 
-        Iterator iterator = tenses.iterator();
-        while (iterator.hasNext())
-        {
-            String key = iterator.next().toString();
-            if(key.contains(tense)){
-                return ((int[]) wordMap.get(key))[personNumber -1];
+            Iterator iterator = tenses.iterator();
+            while (iterator.hasNext()) {
+                String key = iterator.next().toString();
+                if (key.contains(tense)) {
+                    return ((int[]) wordMap.get(key))[personNumber - 1];
+                }
             }
         }
         return -1;

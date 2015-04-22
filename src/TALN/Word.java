@@ -34,7 +34,7 @@ public class Word {
     public String toString(){
         if (Type.equals("verbe")) {
             return this.getWord() + ":" + this.getType() + "\t" + "(" + this.numRoot + ")" + this.getRoot();
-        } else if (Type.equals("nom")) {
+        } else if (Type.contains("nom")) {
             return this.getWord() + ":" + this.getType() + "\t";
         } else {
             return "erreur de type";

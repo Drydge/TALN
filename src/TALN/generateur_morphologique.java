@@ -13,10 +13,5 @@ public class generateur_morphologique {
 
         Analysator.getInstance().generate(args[0], args[1], parseInt(args[2]));
 
-
-
-        // 1- Trouver la racine
-        // 2- Trouver la terminaison
-        // 3- Concat des deux
     }
 }

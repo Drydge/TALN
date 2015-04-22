@@ -56,7 +56,7 @@ public class Analysator {
             int rootNumber = Conjugaison.getInstance().getRootNumber(word,tense,personNumber);
             Word wordRoot = this.RTree.getWordRoot(word, rootNumber);
             String root = wordRoot.getRoot();
-            String term = this.TTree.getOneTerm(tense,personNumber);
+            String term = this.TTree.getOneTerm(wordRoot.getType(), tense, personNumber);
             System.out.println(root+term);
         } catch (IOException e) {
             e.printStackTrace();

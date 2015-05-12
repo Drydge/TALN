@@ -7,10 +7,10 @@
 %% SUJET + VERBE + COMPLEMENT d'OBJET
 %% SUJET + VERBE + COMPLÉMENT CIRCONSTANCIEL
 
-phrase --> sujet(),verbeaction().
-phrase --> sujet(),verbeetat(),adj.
-phrase --> sujet(),verbeetat(),adv,adj.
-phrase --> sujet(),verbeaction(),adv.
-phrase --> sujet(),verbeaction(),adv,adv.
-phrase --> sujet(),verbe(),compl_obj().
-phrase --> sujet(),verbe(),compl_circ().
+phrase --> sujet,verbe(action).
+phrase --> sujet,verbe(etat),adj.
+phrase --> sujet,verbe(etat),adv,adj.
+phrase --> sujet,verbe(action),adv.
+phrase --> sujet,verbe,adv,adv.
+phrase --> sujet,verbe,compl_obj.
+phrase --> sujet,verbe,compl_circ.

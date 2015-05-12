@@ -3,4 +3,4 @@
 ?-[conjugaison].
 ?-[analyse].
 ?-[generate].
-?-[]
+?-[syntaxique].

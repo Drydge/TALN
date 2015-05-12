@@ -25,7 +25,8 @@ mot(boire,verbe,oire,buv,2).
 
 mot(joueur,nom,eur_euse,jou,1).
 
-
+mot(homme,nom,masculin,homme).
+mot(femme,nom,feminin,femm).
 
 
 %Mot

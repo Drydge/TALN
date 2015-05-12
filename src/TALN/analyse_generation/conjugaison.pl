@@ -5,3 +5,4 @@ conj(accord_er,'indicatif_futur',[2,2,2,2,2,2]).
 conj(accord_er,'conditionel_present',[2,2,2,2,2,2]).
 conj(accord_er,'subjonctif_present',[1,1,1,1,1,1]).
 conj(accord_er,'subjonctif_imparfait',[1,1,1,1,1,1]).
+

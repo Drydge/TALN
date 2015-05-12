@@ -35,4 +35,12 @@ term('subjonctif_present',[e,es,e,ions,iez,ent]).
 term('subjonctif_imparfait_1er_groupe',[sse,sses,ât,ssions,ssiez,ssent]).
 term('subjonctif_imparfait_2_3eme_groupe',[sse,sses,ît,ssions,ssiez,ssent]).
 term('subjonctif_imparfait_3eme_groupe',[sse,sses,ût,ssions,ssiez,ssent]).
-	
+
+
+
+%% #NOM
+term('accord',[[],s,e,es]).
+term('masculin',[[],s,[],[]]).
+term('feminin',[[],[],e,es]).
+
+term('eur_euse',[eur,eurs,euse,euses]).

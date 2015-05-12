@@ -11,7 +11,7 @@ manger,
 -verbe_indicatif_futur,1,1,1,1,1,1
 -verbe_conditionel_present,2,2,2,2,2,2
 -verbe_subjonctif_present,4,4,4,4,4,4
--verbe_subjonctif_imparfait,4,4,5,4,4,4
+-verbe_subjonctif_imparfait,4,4,4,4,4,4
 
 mordre,
 -verbe_indicatif_present_3eme_groupe_d,1,1,1,1,1,1

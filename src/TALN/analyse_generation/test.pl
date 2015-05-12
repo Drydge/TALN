@@ -1,1 +1,1 @@
-verbe(manger).
+?- verbe(manger).
